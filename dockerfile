@@ -1,2 +1,3 @@
 FROM nasafprime/fprime-arm:latest
-RUN pip install -U -r https://raw.githubusercontent.com/nasa/fprime/refs/heads/devel/requirements.txt
+USER root
+RUN sudo pip install -U -r https://raw.githubusercontent.com/nasa/fprime/refs/tags/v4.1.1/requirements.txt
