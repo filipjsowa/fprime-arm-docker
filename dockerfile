@@ -12,8 +12,8 @@ RUN cmake \
       -S /opt/pigpio-src \
       -B /opt/pigpio-build \
       -DCMAKE_SYSTEM_NAME=Linux \
-      -DCMAKE_C_COMPILER=aarch64-linux-gnu-gcc \
-      -DCMAKE_CXX_COMPILER=aarch64-linux-gnu-g++ \
+      -DCMAKE_C_COMPILER=/opt/toolchains/bin/aarch64-none-linux-gnu-gcc \
+      -DCMAKE_CXX_COMPILER=/opt/toolchains/bin/aarch64-none-linux-gnu-g++ \
       -DCMAKE_INSTALL_PREFIX=/opt/pigpio \
     && cmake --build /opt/pigpio-build \
     && cmake --install /opt/pigpio-build
