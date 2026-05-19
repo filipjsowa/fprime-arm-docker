@@ -15,6 +15,7 @@ RUN cmake \
       -DCMAKE_C_COMPILER=/opt/toolchains/bin/aarch64-none-linux-gnu-gcc \
       -DCMAKE_CXX_COMPILER=/opt/toolchains/bin/aarch64-none-linux-gnu-g++ \
       -DCMAKE_INSTALL_PREFIX=/opt/pigpio \
+      -DBUILD_SHARED_LIBS=OFF \
     && cmake --build /opt/pigpio-build \
     && cmake --install /opt/pigpio-build
 
