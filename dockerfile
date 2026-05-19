@@ -2,7 +2,7 @@ FROM nasafprime/fprime-arm:latest
 USER root
 RUN sudo pip install -U -r https://raw.githubusercontent.com/nasa/fprime/refs/tags/v4.2.2/requirements.txt
 
- ── Bake in pigpio (cross-compiled for ARM) ───────────────────────────────
+#  ── Bake in pigpio (cross-compiled for ARM) ───────────────────────────────
 # Clone pigpio and cross-compile it against aarch64 (or arm-hf for 32-bit)
 RUN apt-get update && apt-get install -y git cmake make && rm -rf /var/lib/apt/lists/*
 
